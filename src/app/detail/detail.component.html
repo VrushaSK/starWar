@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="left-box" *ngIf="particularPerson">
+    <div class="field">
+      <label for="name">Name</label>
+      <span id="name">{{ particularPerson.name }}</span>
+    </div>  
+    <div class="field">
+      <label for="birth">Birth Year</label>
+      <span id="birth">{{ particularPerson.birth_year }}</span>
+    </div>
+    <div class="field">
+      <label for="gender">Gender</label>
+      <span id="gender">{{ particularPerson.gender }}</span>
+    </div>
+    <div class="field">
+      <label for="height">Height</label>
+      <span id="height">{{ particularPerson.height }}</span>
+    </div>
+    <div class="field">
+      <label for="created">Created At</label>
+      <span id="created">{{ particularPerson.created | date }}</span>
+    </div>
+    <div class="field">
+      <label for="edited">Edited At</label>
+      <span id="edited">{{ particularPerson.edited | date }}</span>
+    </div>
+    <div class="field">
+      <label for="hair-color">Hair Color</label>
+      <span id="hair-color">{{ particularPerson.hair_color }}</span>
+    </div>
+    <div class="field">
+      <label for="eye-color">Eye Color</label>
+      <span id="eye-color">{{ particularPerson.eye_color }}</span>
+    </div>
+    <div class="field">
+      <label for="skin-color">Skin Color</label>
+      <span id="skin-color">{{ particularPerson.skin_color }}</span>
+    </div>
+    <button [routerLink]="''">Go to Listing</button>
+  </div>
+ 
+
+
+
+  <div class="right-box">
+    <h2>Films</h2>
+    <div class="card" *ngFor="let film of filmsName">
+      <h3>{{ film.title }}</h3>
+    </div>
+
+    <h2>Vehicles</h2>
+    <div class="card" *ngFor="let vehicle of vehiclesName">
+      <h3>{{ vehicle.title }}</h3>
+      <p>{{ vehicle.model }}</p>
+    </div>
+
+    <h2>Starships</h2>
+    <div class="card" *ngFor="let starship of starships">
+      <h3>{{ starship.name }}</h3>
+    </div>
+  </div>
+</div>
+

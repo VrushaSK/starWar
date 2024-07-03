@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #28926ee3; /* Green theme */
+    color: white;
+  }
+  
+  .title {
+    font-size: 2em;
+  }
+  
+  .subtitle {
+    font-size: 0.8em;
+  }
+  

@@ -1,0 +1,43 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 54.5%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .filter h2 {
+    margin-bottom: 10px;
+  }
+  
+  .filter-option {
+    margin-bottom: 10px;
+  }
+  
+  .filter-option select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  
+  .search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28926ee3; 
+    color: white;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #45a049;
+  }
+  

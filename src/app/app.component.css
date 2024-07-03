@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure full viewport height */
+  }
+  
+  .content {
+    display: flex;
+    flex: 1; /* Allow content to expand to fill remaining space */
+    align-items: center; /* Center items vertically */
+    justify-content: space-around; /* Distribute items evenly along the main axis */
+  }

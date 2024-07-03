@@ -1,0 +1,36 @@
+<div class="search-result">
+    <h2>Search Results</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Character Name</th>
+          <th>Species</th>
+          <th>Birth Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of paginatedResults; let i = index">
+          <td>{{i + 1 + (currentPage - 1) * pageSize}}</td>
+          <td><a [routerLink]="['/people/', i + 1 + (currentPage - 1) * pageSize]">{{ result.name }}</a></td>
+          <td>{{result. species.length ? result.species[0] : 'Unknown'}}</td>
+          <td>{{result.birth_year}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Page Numbers -->
+    <div class="pagination">
+      <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+      <span>
+        <button *ngFor="let pageNumber of pageNumbers"
+                (click)="goToPage(pageNumber)"
+                [class.active]="pageNumber === currentPage">
+          {{pageNumber}}
+        </button>
+      </span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+  </div>
+  
